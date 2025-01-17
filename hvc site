@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <title>Website van HVC</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foto's met Tekst en Afbeelding</title>
+    <style>
+        body {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .large-photo-container {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+        .large-photo {
+            width: 100%;
+        }
+        .text-overlay {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 60px;
+            padding: 10px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0,0.7); 
+        }
+        .small-photo-inside {
+            position: absolute;
+            bottom: 890px;
+            right: 0px;
+            width: 30%;
+            height: auto;
+            z-index: 20; /* Kies een waarde hoger dan de z-index van donkerblauw-vlak2 */
+        }
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centert de menubalk */
+    width: 100%;
+}
+.nav-logo {
+    width: auto;
+    height: 125px; /* Pas de grootte van de foto aan */
+    margin-right: 50px; /* Ruimte tussen de foto en menubalk */
+}
+header {
+    display: flex;
+    align-items: center; /* Centert de menubalk horizontaal */
+    padding: 10px;
+    background-color: #f1f1f1; /* Optioneel */
+}
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centert de menubalk */
+    width: 100%;
+}
+.nav-logo {
+    width: auto;
+    height: 125px;
+    margin-left: 200px;
+}
+.menu {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 120px;
+    margin-left: 0px;
+}
+.menu > li {
+    position: relative;
+    
+}
+.menu a {
+    color: rgb(22, 7, 109);
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+.menu a:hover {
+    color: rgb(2, 160, 160);
+}
+.caret {
+    font-size: 1em;
+    margin-left: 5px;
+    transform: translateY(1px);
+}
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f1f1f1;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.submenu li a {
+    padding: 12px 20px;
+    color: rgb(22, 7, 109);
+    text-decoration: none;
+    display: block;
+}
+.submenu li a:hover {
+    color: rgb(2, 160, 160);
+}
+.menu > li:hover .submenu {
+    display: block;
+}
+        .lijn{
+            background-color: #46a1a1;
+            width: 255px;
+            height: 2px;
+            position: absolute;
+            top: 70px;
+            right: 845px;
+        }
+        .pijl{
+            position: absolute;
+            top: 7px;
+            right: 850px;
+            font-size: 30px;
+            color: #46a1a1;
+        }
+        .Waar {
+        color: rgb(22, 7, 109);
+        position: absolute;
+        top: 30px; /* Verlaag deze waarde */
+        right: 912px;
+        }
+        .rechtsboven {
+            display: flex;
+            list-style-type: none;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 35px;
+            right: 380px;
+        }
+        .rechtsboven a{
+            color: rgb(22, 7, 109);
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            display: flex;
+            align-items: center;
+        }
+        .strepen{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            top: 37px;
+            right: 460px;
+            width: 250px;
+        }
+        .streep{
+            width: 2px;
+            height: 20px;
+            margin: 10px;
+            background-color: #46a1a1;
+        }
+        .Ons-onderwijs{
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            justify-content: center;
+            position: absolute;
+            right: 300px;
+            top: 125px;
+        }
+        .groep78 a{
+            display: flex;
+            text-decoration: none;
+            color: rgb(248, 248, 248);
+            padding: 14px 30px;
+            background-color: #010169;
+            border-radius: 70px;
+            position: absolute;
+            top: 125px;
+            right: 100px;
+        }
+        .Ons-onderwijs a{
+            color: rgb(22, 7, 109);
+            padding: 10px 28px;
+            text-decoration: none;
+            text-align: center;
+            display: flex;
+            border: 2px solid rgb(22, 7, 109);
+            border-radius: 70px;
+            align-items: center;
+        }
+        a{
+            text-decoration: none;
+        }
+        ul{
+            list-style: none;
+        }
+        .menu > li {
+            position: relative;
+            top: -20px;
+            right: -40px;
+        }
+        .werken{
+            color: rgb(22, 7, 109);
+            position: absolute;
+            top: 32px;
+            left: 1300px;
+            text-decoration: none;
+            list-style-type: none;
+        }
+        ul.werken > li > a {
+        color: rgb(22, 7, 109);
+        }
+        .donkerblauw-vlak{
+            width: 600px;
+            height: 1125px;
+            background: linear-gradient(to right, #00008B 50%, rgba(0, 0, 139, 0) 100%);
+            position: absolute;
+            top: 200px;
+            z-index: 10;
+        }
+        .donkerblauw-vlak2{
+            width: 600px;
+            height: 1125px;
+            background: linear-gradient(to left, #00008B 50%, rgba(0, 0, 139, 0) 100%);
+            position: absolute;
+            top: 200px;
+            z-index: 10;
+            right: 0px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigatie met submenu -->
+    <header>
+        <nav>
+            <div class="nav-container">
+                <img src="logo.svg" alt="Logo" class="nav-logo">
+                <ul class="menu">
+                    <li>
+                        <a href="Untitled-1.html">Leerlingen & ouders <span class="caret">&#8744;</span></a>
+                        <ul class="submenu">
+                            <li><a href="#">Lestijden en toetsweken</a></li>
+                            <li><a href="#">Schoolvakanties en lesvrije dagen</a></li>
+                            <li><a href="#">Rooster, magister en wifi</a></li>
+                            <li><a href="#">Raport & bevoreringsnormen</a></li>
+                            <li><a href="#">Examens</a></li>
+                            <li><a href="#">Afspraken</a></li>
+                            <li><a href="#">Schoolkosten</a></li>
+                            <li><a href="#">Nieuwsbrieven</a></li>
+                            <li><a href="#">GSA</a></li>
+                            <li><a href="#">Meepraten</a></li>
+                            <li><a href="#">Aanmelden</a></li>
+                            <li><a href="#">Absentie doorgeven</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="Untitled-1.html">Onze school <span class="caret">&#8744;</span></a>
+                        <ul class="submenu">
+                            <li><a href="#">Missie en Visie</a></li>
+                            <li><a href="#">Ons team</a></li>
+                            <li><a href="#">Bestuur</a></li>
+                            <li><a href="#">Onderwijskwaliteit</a></li>
+                            <li><a href="#">Lessentabellen en vakken</a></li>
+                            <li><a href="#">Skills</a></li>
+                            <li><a href="#">Protocollen & regelingen</a></li>
+                            <li><a href="#">Partners</a></li>
+                            <li><a href="#">Werken bij HVC</a></li>
+                            <li><a href="#">Contactgegevens</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="Untitled-1.html">Ondersteuning <span class="caret">&#8744;</span></a>
+                        <ul class="submenu">
+                            <li><a href="#">Coördinator Leerlingondersteuning</a></li>
+                            <li><a href="#">Begeleider Passend Onderwijs</a></li>
+                            <li><a href="#">Orthopedagoog</a></li>
+                            <li><a href="#">Mentoren & Huiswerk begeleiding</a></li>
+                            <li><a href="#">Trajectvoorziening</a></li>
+                            <li><a href="#">Dyslexie en Dyscalculie</a></li>
+                            <li><a href="#">Trainingen</a></li>
+                            <li><a href="#">Vertrouwenspersoon</a></li>
+                            <li><a href="#">Hoogbegaafdheid</a></li>
+                            <li><a href="#">Leerplicht</a></li>
+                            <li><a href="#"></a></li>
+                        </ul>
+                    </li>
+                    <ul class="rechtsboven">
+                        <li><a href="Untitled-1.html">Ziekmelden</a>
+                        <li><a href="Untitled-1.html">Downloads</a>
+                        <li><a href="Untitled-1.html">Magister</a>
+                        <li><a href="Untitled-1.html">Zermelo</a>
+                    </ul>
+                    <div class="strepen">
+                        <div class="streep"></div>
+                        <div class="streep"></div>
+                        <div class="streep"></div>
+                    </div>
+                    <li>
+                        <a href="Untitled-1.html">Actueel <span class="caret">&#8744;</span></a>
+                        <ul class="submenu">
+                            <li><a href="#">Nieuws</a></li>
+                            <li><a href="#">Agenda</a></li>
+                            <!-- Voeg hier submenu items toe -->
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <ul class="groep78">
+                <li><a href="Untitled-1.html">Groep 7 en 8</a>
+            </ul>
+            <ul class="werken">
+                <li><a href="Untitled-1.html">Werken bij HVC</a>
+            </ul>
+            <ul class="Ons-onderwijs">
+                <li><a href="Untitled-1.html">Ons Onderwijs<span class="caret"> &#8744;</span></a>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Grote foto met tekst en kleine foto binnenin -->
+    <div class="large-photo-container">
+        <img src="slider-hvc-hvc.webp" alt="Grote foto" class="large-photo">
+        <p><div class="text-overlay"><strong>Samen</strong><span class="light"> morgen maken </span></div></p>
+        <img src="logo.png" alt="Kleine foto binnen de grote foto" class="small-photo-inside">
+    </div>
+    <div class="lijn"></div>
+    <p class="pijl">&#8594;</p>
+    <p class="Waar">Waar ben je naar op zoek:</p>
+    <div class="donkerblauw-vlak"></div>
+    <div class="donkerblauw-vlak2"></div>
+</body>
+</html>
